@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+	--index: calc(1vw + 1vh);
+	--swiper-theme-color: #4b4d53;
+	--swiper-navigation-size: 35px;
+	--swiper-navigation-sides-offset: 30px;
+	--swiper-pagination-bottom: 25px;
+	--swiper-pagination-color: #afb3c0;
+	--swiper-pagination-bullet-inactive-color: #36373c;
+	--swiper-pagination-bullet-inactive-opacity: 1;
+}
+body {
+	background-color: #000;
+	color: white;
+	background-image: url('img/IMG_3323.PNG');
+    background-size: cover; /* Rasmi to'liq ekranni qamrab olishi */
+    background-repeat: no-repeat; /* Rasmni qaytarilishini oldini olish */
+    background-position: center center; /* Markazga joylashtirish */
+}
+.slider {
+	height: 100vh;
+}
+.slider .slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slide__content {
+	text-align: center;
+}
+.slide__content h2 {	
+	font-size: calc(var(--index) * 3);
+	text-transform: uppercase;
+	letter-spacing: calc(var(--index) * 1.6);
+	margin-bottom: calc(var(--index) * 3);
+	position: relative;
+}
+.slide__content p {
+	font-size: calc(var(--index) * 0.8);
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: calc(var(--index) * .01);
+	margin-bottom: calc(var(--index) * 2.6);
+}
+.slide__content h1 {
+	font-size: calc(var(--index) * 0.8);
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: calc(var(--index) * .01);
+	margin-bottom: calc(var(--index) * 2.6);
+}
+.slide__content h3 {
+	font-size: calc(var(--index) * 0.8);
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: calc(var(--index) * .01);
+	margin-bottom: calc(var(--index) * 2.6);
+}
+.slider-navigation > * {
+	border: 1.5px solid var(--swiper-theme-color);
+	border-radius: 10em;
+	width: 50px;
+	height: 50px;
+}
+.slide__content h2::after {
+	content: '';
+	height: 1px;
+	width: 100%;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	bottom: calc(var(--index) * -1	);
+}
+.slide__content .background-image::after {
+	font-size: 3em;
+	margin: auto;
+}
+
+  
